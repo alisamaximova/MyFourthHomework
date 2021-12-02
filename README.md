@@ -43,3 +43,37 @@ Next , a format file is created .dot for its further use in the graphical displa
 After automatic generation, in the folder where our main.c is located, we will be able to see a graph in .png format.
 
 ![Screenshot](graph.png)
+
+After the operations performed, we make a request to delete vertices adjacent to the edge. 
+The user enters the required edge in the form: "a-b". 
+Then the process of removing vertices, generating a new .dot file and building a modified graph takes place.
+
+
+![Screenshot](graph1.png)
+
+The second subproblem consists in sorting the remaining vertices in descending order of their multiplicity by the insertion method. 
+For implementation, we use the Insertion Sort function:
+
+```c
+	void InsertionSort(int mass [], int n){
+		int i, j, temp;
+		for (i = 0; i < n; i++){
+    			temp = mass[i];
+    			for (j = i - 1; j >= 0; j--){
+        			if (mass[j] < temp)
+            				break;
+  				mass[j + 1] = mass[j];
+        			mass[j] = temp;
+    			}
+		}
+	} 
+```
+
+*Insertion sorting is a sorting algorithm in which the elements of the input sequence are viewed one by one, 
+and each new incoming element is placed in a suitable place among the previously ordered elements.*
+
+![hippo](https://tproger.ru/s3/uploads/2017/09/InsertionSort.gif)
+
+## What do we get in the end?
+The program is working properly. 
+It does not break when there are loops in the graph. Graphical display of graphs is debugged
