@@ -77,3 +77,9 @@ and each new incoming element is placed in a suitable place among the previously
 ## What do we get in the end?
 The program is working properly. 
 It does not break when there are loops in the graph. Graphical display of graphs is debugged
+
+### Launch the project: 
+To start the project, you need to open the main.c file in the Dev-C++ application. 
+Next, you need to click on the "Compile and execute" button or press F11
+
+![Screenshot](BeginProgram.png)

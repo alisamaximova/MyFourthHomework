@@ -1,0 +1,9 @@
+graph HomeWWork4 {
+c;
+d;
+e;
+f;
+c -- d;
+c -- e;
+d -- e;
+}
